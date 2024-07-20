@@ -31,9 +31,9 @@ const store = new sessionStore({
     expiration: 30 * 60 * 1000, // Sessions expire after 30 minutes of inactivity
 });
 
-// (async () => {
-//   await db.sync({ alter: true });
-// })();
+(async () => {
+  await db.sync({ alter: true });
+})();
 
 app.use(
     session({
@@ -71,7 +71,7 @@ app.use(BatchAlatRoute);
 app.use(DokterRoute);
 app.use(TestRoute);
 
-// store.sync();
+store.sync();
 
 app.listen(port, host, () => {
     console.log('Server up and running...');
