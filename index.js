@@ -18,6 +18,9 @@ import TestRoute from './routes/TestRoute.js';
 
 dotenv.config();
 
+const port = process.env.APP_PORT || 3000;
+const host = process.env.APP_HOST || 'localhost';
+
 const app = express();
 
 const sessionStore = SequelizeStore(session.Store);
@@ -70,6 +73,6 @@ app.use(TestRoute);
 
 // store.sync();
 
-app.listen(process.env.APP_PORT, () => {
+app.listen(port, host, "0.0.0.0" () => {
     console.log('Server up and running...');
 });
