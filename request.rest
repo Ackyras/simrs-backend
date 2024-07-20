@@ -1,0 +1,18 @@
+GET http://localhost:5000/suppliers
+
+###
+GET http://localhost:5000/suppliers/1
+
+###
+POST http://localhost:5000/suppliers
+Content-Type: application/json
+{
+    "id":"",
+    "tanggalMasuk": "",
+    "nama": "Supplier Husein",
+    "noFaktur": "12345678",
+    "kontak": "085156862846",
+    "alamat": "Jl Manggis no 13 Pasir Gintung",
+    "kategori": "Obat",
+    "status": "Nonaktif",
+}
