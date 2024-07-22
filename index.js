@@ -19,7 +19,7 @@ import TestRoute from './routes/TestRoute.js';
 dotenv.config();
 
 const port = process.env.APP_PORT || 3000;
-const host = process.env.APP_HOST || "0.0.0.0";
+const host = process.env.APP_HOST || '0.0.0.0';
 
 const app = express();
 
@@ -50,11 +50,7 @@ app.use(
 app.use(
     cors({
         credentials: true,
-        origin: [
-            'http://localhost:3000',
-            'http://ryacuduinfo.site',
-            'https://ryacuduinfo.site',
-        ],
+        origin: '*',
     })
 );
 
